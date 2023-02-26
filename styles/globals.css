@@ -1,0 +1,53 @@
+@import 'https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css';
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #fffbf5;
+    height: 100vh;
+    background-image: url('../public/bg3.jpeg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    color: white;
+}
+
+.navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7efe5;
+    gap: 20px;
+    font-size: 2rem;
+    padding: 10px;
+    background-image: url('../public/bg3.jpeg');
+}
+
+.aboutContainer {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    width: 60%;
+    height: 100vh;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.recipesContainer {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    width: 60%;
+    font-size: 1.5rem;
+}
+
+.cardGrid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding-top: 20px;
+    gap: 20px;
+}
