@@ -32,8 +32,8 @@ function Cards({params: {id}}: PageProps) {
         });
     }, []);
 
-    if (isLoading) return <p>Loading...</p>;
-    if (!data) return <p>No profile data</p>;
+    if (isLoading) return <h1 className='alignCenter'>Loading...</h1>;
+    if (!data) return <h1 className='alignCenter'>No data</h1>;
 
     return (
         <div>
@@ -63,6 +63,7 @@ function Cards({params: {id}}: PageProps) {
                     {/* <h1>{JSON.stringify(data)}</h1> */}
                     {data.map((item: GridCard) => (
                         <GridCard
+                            key={item._id}
                             id={item._id}
                             name={item.name}
                             imageLink={item.imageLink}

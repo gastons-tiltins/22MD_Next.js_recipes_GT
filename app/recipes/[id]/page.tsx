@@ -23,8 +23,8 @@ function SingleCard({params: {id}}: PageProps) {
         });
     }, []);
 
-    if (isLoading) return <p>Loading...</p>;
-    if (!data) return <p>No profile data</p>;
+    if (isLoading) return <h1 className='alignCenter'>Loading...</h1>;
+    if (!data) return <h1 className='alignCenter'>No data</h1>;
 
     const {_id, name, imageLink, desc, category} = data[0];
 

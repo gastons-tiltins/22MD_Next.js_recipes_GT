@@ -64,8 +64,8 @@ body {
     margin: auto;
     flex-direction: column;
     width: 40%;
-    align-items: center;
-    background-color: red;
+    align-items: stretch;
+    /* background-color: red; */
 }
 
 .colSpan2 {
@@ -77,4 +77,22 @@ body {
 
 .searchField {
     padding-top: 12px;
+}
+
+.alignCenter {
+    display: flex;
+    justify-content: center;
+}
+
+.addForm {
+    padding-top: 30px;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    flex-direction: column;
+    width: 30%;
+    align-items: stretch;
+    background-color: skyblue;
+    padding: 20px;
+    border-radius: 5px;
 }
