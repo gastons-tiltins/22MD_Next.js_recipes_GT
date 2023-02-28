@@ -1,10 +1,10 @@
 import {Schema, model, models} from 'mongoose';
 
 const recipeSchema = new Schema({
-    name: {type: String, required: true},
-    imageLink: {type: String, required: true},
-    desc: {type: String, required: true},
-    category: {type: String, required: true},
+    name: String,
+    imageLink: String,
+    desc: String,
+    category: String,
 });
 
 const Recipe = models.Recipe || model('Recipe', recipeSchema);
