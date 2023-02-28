@@ -110,3 +110,8 @@ body {
     justify-content: right;
     justify-items: right;
 }
+
+/* mouse over link */
+a:hover {
+    color: #3488ce;
+}
