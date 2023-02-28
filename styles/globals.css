@@ -8,14 +8,14 @@
 
 body {
     background-color: #fffbf5;
-    height: 100vh;
+    height: 200vh;
     background-color: #f7efe5;
-    /* background-image: url('../public/bg3.jpeg'); */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    background-image: url('../public/bg3.jpeg');
+    /* background-position: center;  */
+    background-repeat: repeat;
+    background-size: cover;
     color: white;
-    color: blue;
+    /* color: blue; */
 }
 
 .navBar {
@@ -27,7 +27,7 @@ body {
     /* padding: 10px; */
     padding-top: 10px;
     background-color: #f7efe5;
-    /* background-image: url('../public/bg3.jpeg'); */
+    background-image: url('../public/bg3.jpeg');
 }
 
 .aboutContainer {
@@ -48,6 +48,13 @@ body {
     font-size: 1.5rem;
 }
 
+.cutoffText {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
 .cardGrid {
     display: grid;
     grid-template-columns: 33% 33% 33%;
@@ -63,7 +70,7 @@ body {
     display: flex;
     margin: auto;
     flex-direction: column;
-    width: 40%;
+    width: 30%;
     align-items: stretch;
     /* background-color: red; */
 }
@@ -92,7 +99,14 @@ body {
     flex-direction: column;
     width: 30%;
     align-items: stretch;
-    background-color: skyblue;
+    background-color: #bf977c;
+    background-color: #5e5d65;
     padding: 20px;
     border-radius: 5px;
+}
+
+.alignRight {
+    display: flex;
+    justify-content: right;
+    justify-items: right;
 }

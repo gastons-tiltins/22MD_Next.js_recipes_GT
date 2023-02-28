@@ -57,7 +57,10 @@ export default async function singleRecipe({params: {id}}: PageProps) {
                             </div>
                             <div className='content'>{desc}</div>
                             <div>
-                                <button onClick={() => handleDelete(id)}>
+                                <button
+                                    className='button is-danger is-light'
+                                    onClick={() => handleDelete(id)}
+                                >
                                     Delete
                                 </button>
                             </div>

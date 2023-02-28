@@ -1,7 +1,23 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function GridCard({id, name, imageLink, desc, category}) {
+type Recipe = {
+    id: string;
+    name: string;
+    imageLink: string;
+    desc: string;
+    category: string;
+};
+
+export default function GridCard({
+    id,
+    name,
+    imageLink,
+    desc,
+    category,
+}: Recipe) {
+    category = category.charAt(0).toUpperCase() + category.slice(1);
+
     return (
         <div>
             <Link href={`/recipes/${id}`}>
@@ -12,8 +28,8 @@ export default function GridCard({id, name, imageLink, desc, category}) {
                                 className='aspectRatio'
                                 src={imageLink}
                                 alt={name}
-                                // width={1000}
-                                // height={1000}
+                                // width={300}
+                                // height={200}
                                 fill
                             />
                         </figure>
@@ -22,11 +38,13 @@ export default function GridCard({id, name, imageLink, desc, category}) {
                         <div className='media'>
                             <div className='media-content'>
                                 <p className='title is-4'>{name}</p>
-                                <p className='title is-4'>{id}</p>
+                                {/* <p className='title is-4'>{id}</p> */}
                                 <p className='subtitle is-6'>{category}</p>
                             </div>
                         </div>
-                        <div className='content'>{desc}</div>
+                        <div className='content cutoffText is-size-5'>
+                            {desc}
+                        </div>
                     </div>
                 </div>
             </Link>

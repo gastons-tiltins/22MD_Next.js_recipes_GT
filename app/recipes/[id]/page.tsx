@@ -31,7 +31,7 @@ function SingleCard({params: {id}}: PageProps) {
     const handleDelete = async (id: any) => {
         axios
             .put(`http://localhost:3000/api/delete`, {_id: id})
-            .then(() => console.log('Deleted!'))
+            .then(() => console.log('Recipe Deleted!'))
             .then(() => {
                 router.push('/recipes');
             });
@@ -57,13 +57,16 @@ function SingleCard({params: {id}}: PageProps) {
                         <div className='media'>
                             <div className='media-content'>
                                 <p className='title is-4'>{name}</p>
-                                <p className='title is-4'>{id}</p>
+                                {/* <p className='title is-4'>{id}</p> */}
                                 <p className='subtitle is-6'>{category}</p>
                             </div>
                         </div>
                         <div className='content'>{desc}</div>
                         <div>
-                            <button onClick={() => handleDelete(id)}>
+                            <button
+                                className='button is-danger is-light'
+                                onClick={() => handleDelete(id)}
+                            >
                                 Delete
                             </button>
                         </div>
